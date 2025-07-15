@@ -1,9 +1,13 @@
 Ce projet est réalisé dans le cadre de l'ECF n°1 portant sur les compétences en développement Front-End de la formation
-de développeur Web et Web mobile 2025-2026. 
+de développeur Web et Web mobile 2025-2026. Nommé "Horoscope Oracle du Jour", il vise à créer une application simple type SPA, permettant à un utilisateur de faire un tirage d'horoscope en ligne, via un appel d'API.
+
+
+------------------------------------------ FICHIER, TECHNOLOGIE ET ARBORESCENCE -----------------------------------------------
 
 Les fichiers sont fait pour fonctionner de la manière suivante :
+
 index.html --> Fichier page d'accueil du projet, c'est ici que les utilisateurs arriveront lors de leur accès au site. Le but
-de cette page est de leur fournir la possibilité de faire un tirage de message d'horoscope et de leur faite , via un appel d'API géré derrière.
+de cette page est de leur fournir la possibilité de faire un tirage de message d'horoscope et de leur faite , via un appel d'API géré derrière par un fichier JavaScript.
 
 js/app.js --> Ce fichier contiendra toute la logique de création dynamique des cartes en JavaScript permettant l'affichage des messages.
 C'est également ce fichier qui sera en charge, via un appel API dont l'URL et la clé nous sont fournis, de récupérer lesdits 
@@ -15,7 +19,7 @@ la formule : nomDuFichierStylisé.css
 pages/* --> Contient les pages inclusent dans le footer du projet, c'est à dire la RGPD, les conditions générales d'utilisations,
 les mentions légales et enfin l'à propos. 
 
-.htaccess et .github/* --> Ces fichiers sont là pour gérer la partie déploiement du projet, le fichier .htaccess à la racine
+.htaccess et .github/workflows/deploy.yml --> Ces fichiers sont là pour gérer le déploiement du projet, le fichier .htaccess à la racine
 du projet permet de gérer le logique de fonctionnement du site : sur quelle page les utilisateurs atterissent quand ils arriveront
 sur le site, vers quelle page rediriger en cas d'erreur, la durée de validité des données et fichiers mis en cache par le navigateur etc.
 Le dossier .github quand à lui contient la logique de déploiement automatique de notre en site en suivant la technique CI/CD. En
@@ -64,8 +68,12 @@ ECF-PROD/
 |___ index.html
 
 Pour la question des technologies, elles ont déjà été abordés précédement : le HTML5 pour le rendu de la page dans le navigateur,
-le CSS3 pour le design des pages ainsi que JavaScript pour la gestion des interactions utilisateur - interface WEB. Ici il n'est
+le CSS3 pour le design des pages et les animations ainsi que JavaScript pour la gestion des interactions utilisateur - interface WEB. Ici il n'est
 pas question d'utiliser des technologies relatives à la partie BackEnd d'un site, comme PHP8 car celà n'est pas le point d'évaluation
 de cet ECF, se concentrant sur la partie FrontEnd d'un site Web.
 
-Le site est accessible en ligne via le lien suivant : https://ecf1-roger-paulin.sidathsoeun.fr, et le code composant le site est disponible sur mon Github à l'adresse suivante : https://github.com/SkarOz/ECF-PROD .
+------------------------------------------------- ACCES AU SITE ET REPO GITHUB ------------------------------------------------
+
+Le site est accessible en ligne via le lien suivant : https://ecf1-roger-paulin.sidathsoeun.fr, et le code composant le site est disponible sur mon Github à l'adresse suivante : https://github.com/SkarOz/ECF-PROD.
+
+Pour cloner localement le projet, vous pouvez directement télécharger le ZIP complet contenant le code sur la page Github du projet, ou alors utiliser la commande [git clone https://github.com/SkarOz/ECF-PROD.git] daans un terminal de commande en ayant Git d'installé sur votre machine.
