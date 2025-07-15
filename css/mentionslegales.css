@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', 'Segoe UI', 'Roboto', Arial, sans-serif;
+    overflow-x:hidden;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Prend toute la hauteur de la fenêtre */
+}
+
+.container {
+    padding: 60px 20px; /* Ajout d'un padding pour éviter que le contenu soit caché sous la barre de navigation */
+    max-width: 800px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.container p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+.footer {
+    background-color: #161618;
+    color: #aaa;
+    text-align: center;
+    padding: 16px 20px;
+    font-size: 14px;
+    width: 100%;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  .footer a {
+    color: #999;
+    text-decoration: none;
+    margin: 0 6px;
+    white-space: nowrap;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+  
+  .logo-footer {
+    width: 40px;
+    height: auto;
+  }
+  
+  /* 🧠 Le vrai contournement : regrouper les <a> horizontalement */
+  .footer {
+    flex-wrap: nowrap;
+  }
+  
+  .footer a {
+    display: inline;
+  }
+  
+  /* On force tous les <a> à s'afficher sur une ligne */
+  .footer-links-inline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
