@@ -1,10 +1,11 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html, body {
+  height: 100vh;
+  overflow: hidden;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,32 +20,90 @@ body {
   background-image: url("../ressources/image/combined_planetarium_final.png");
   background-size: cover;
   background-position: center;
-
+  z-index: -1;
+  display: relative;
 }
 
-#container {
-  flex: 1;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
-  background: transparent;
-  border: none;
-  border-radius: 0;
+#zodiacImages {
+  position: fixed;
+  top: 28%;
+  left: 28%;
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
-#horoscopeResult {
-  display: none;
-  background: #af84e860;
-  color: #fff;
+.horoscope-grid {
+  display: grid;
+  grid-template-columns: repeat(5);
+  gap: 16px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+
+.carte-horoscope {
+  width: auto;
+  height: auto;
+  max-height: 170px;
+  background: rgba(162, 89, 230, 0.15);
   border-radius: 18px;
-  padding: 24px;
-  margin: 24px 0;
-  font-size: 1.15rem;
-  box-shadow: 0 4px 16px rgba(162, 89, 230, 0.15);
-  transition: opacity 0.3s;
+  padding: 15px;
+  box-shadow: 0 4px 16px rgba(162, 89, 230, 0.25);
+  box-sizing: border-box;
+  color: #e5ddba;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.95rem;
+  overflow: hidden;
 }
+.zodiac-card-img {
+  width: 30px;  
+  height: 30px;
+  margin: auto;
+}
+
+.carte-horoscope:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(162, 89, 230, 0.4);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+#resultHoroscope {
+  display: grid;
+  grid-template-columns: repeat(5, 110px);
+  gap: 64px;
+  justify-content: center;
+  margin: auto;
+}
+
+#resultHoroscope .carte-horoscope:nth-child(12) {
+  grid-column: 2;
+}
+#resultHoroscope .carte-horoscope:nth-child(13) {
+  grid-column: 4;
+}
+
+.zodiac-img {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  animation: float 3s ease-in-out infinite;
+  transition: transform 1s ease, left 1s ease, top 1s ease;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
 .footer {
   background-color: #161618;
   color: #aaa;
@@ -181,24 +240,4 @@ h1 {
     font-size: 1.6rem;
     margin-bottom: 16px;
   }
-}
-
-.carte-horoscope {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 16px;
-  margin: 10px 0;
-  background-color: #fdfdfd;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-}
-
-.carte-horoscope h3 {
-  margin: 0 0 8px;
-  color: #010101;
-}
-
-.carte-horoscope p {
-  margin: 0;
-  font-style: italic;
-  color: #010101;
 }
