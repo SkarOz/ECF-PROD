@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #e5ddba;
+    background-image: url("../ressources/image/planetarium.jpeg");
+  background-size: cover;
+}
+
+#container {
+  flex: 1;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+#horoscopeResult {
+  display: none;
+  background: #af84e860;
+  color: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  margin: 24px 0;
+  font-size: 1.15rem;
+  box-shadow: 0 4px 16px rgba(162, 89, 230, 0.15);
+  transition: opacity 0.3s;
+}
+.footer {
+  background-color: #161618;
+  color: #aaa;
+  text-align: center;
+  padding: 16px 20px;
+  font-size: 14px;
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: #999;
+  text-decoration: none;
+  margin: 0 6px;
+  white-space: nowrap;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.logo-footer {
+  width: 40px;
+  height: auto;
+}
+
+.footer {
+  flex-wrap: nowrap;
+}
+
+.footer a {
+  display: inline;
+}
+
+.footer-links-inline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#demanderAuCielBtn {
+  width: 100%;
+  padding: 16px 0;
+  border: 2px solid #a259e6;
+  border-radius: 30px;
+  background: transparent;
+  color: #a259e6;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+#demanderAuCielBtn:hover {
+  background: #a259e6;
+  color: #fff;
+}
+
+#choixSigne {
+  display: block;
+  width: 100%;
+  margin: 0 auto 18px auto;
+  padding: 14px 0;
+  background: transparent;
+  border: 2px solid #a259e6;
+  border-radius: 30px;
+  color: #a259e6;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
+  box-sizing: border-box;
+  letter-spacing: 0.5px;
+  appearance: none;
+  background-image: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #a259e6;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 8px #3336;
+}
+
+@media (max-width: 900px) {
+  #container {
+    max-width: 95%;
+    padding: 12px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  #demanderAuCielBtn, #choixSigne {
+    font-size: 1.2rem;
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  html, body {
+    font-size: 16px;
+  }
+  #container {
+    padding: 10px;
+  }
+  #horoscopeResult {
+    padding: 16px;
+    font-size: 1.05rem;
+    margin: 16px 0;
+  }
+  #demanderAuCielBtn, #choixSigne {
+    font-size: 1rem;
+    padding: 14px 0;
+    border-width: 2px;
+  }
+  .footer {
+    font-size: 13px;
+    padding: 10px 8px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  html, body {
+    font-size: 15px;
+  }
+  #container {
+    padding: 8px;
+  }
+  #horoscopeResult {
+    padding: 12px;
+    font-size: 1rem;
+  }
+  #demanderAuCielBtn, #choixSigne {
+    font-size: 0.9rem;
+    padding: 12px 0;
+    border-width: 2px;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+}

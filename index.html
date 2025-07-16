@@ -1,29 +1,58 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="ROGER Paulin">
-    <meta name="description" content=""> 
-    <title> - ROGER Paulin</title>
-    <link rel="stylesheet" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="ressources/image/logo.webp" type="image/x-icon">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Paulin ROGER">
+        <meta name="description" content="Découvrez votre horoscope quotidien avec Paulin ROGER. Sélectionnez votre signe astrologique et laissez les étoiles guider votre vie.">
+        <title>La METEO DES ETOILES - HOROSCOPE - ROGER Paulin</title>
+        <link rel="stylesheet" href="css/index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="ressources/image/logo.webp" type="image/x-icon">
+    </head>
 
-<body>
+ <body>     
+  <h1>Mon Horoscope</h1>
 
-    <footer class="footer">
-        <p>&copy; 2025 Paulin ROGER - Tout droit réservé</p>
-        <img src="ressources/image/logo.webp" alt="Logo de dév de ROGER Paulin" class="logo-footer">
-        <div class="footer-links-inline">
-        <a href="pages/apropos.html">À propos - </a> 
-        <a href="pages/mentionslegales.html">Mentions légales - </a>
-        <a href="pages/cgu.html">Conditions générales d'utilisation - </a>
-        <a href="pages/rgpd.html">Politique de confidentialité</a>
-        </div>
-    </footer>
+        
+   <div id="container">
+        <form id="horoscopeForm">
+            <label for="choixSigne">
+                <select name="signe" id="choixSigne">
+                    <option value="">Selectionnez votre signe astro</option>
+                    <option value="Balance">Balance</option>
+                    <option value="Bélier">Bélier</option>
+                    <option value="Cancer">Cancer</option>
+                    <option value="Capricorne">Capricorne</option>
+                    <option value="Gémeaux">Gémeaux</option>
+                    <option value="Lion">Lion</option>
+                    <option value="Poissons">Poissons</option>
+                    <option value="Sagittaire">Sagittaire</option>
+                    <option value="Scorpion">Scorpion</option>
+                    <option value="Taureau">Taureau</option>
+                    <option value="Verseau">Verseau</option>
+                    <option value="Vierge">Vierge</option>
+                </select>
+            </label >
+            <button type="submit" id="demanderAuCielBtn">✨Laissez les étoiles guider votre vie✨</button>
+        </form>
 
-    <script src="js/index.js"></script>
-</body>
+        <div id="horoscopeResult"></div>
+   </div>
+
+   <footer class="footer">
+    <p>&copy; 2025 Paulin ROGER - Tout droit réservé</p>
+    <img src="ressources/image/logo.webp" alt="Logo de dév de ROGER Paulin" class="logo-footer">
+    <div class="footer-links-inline">
+    <a href="pages/apropos.html">À propos - </a> 
+    <a href="pages/mentionslegales.html">Mentions légales - </a>
+    <a href="pages/cgu.html">Conditions générales d'utilisation - </a>
+    <a href="pages/rgpd.html">Politique de confidentialité</a>
+    </div>
+</footer>
+
+
+    <script src="js/app.js"></script>
+
+ </body>
 </html>
