@@ -16,8 +16,10 @@ html, body {
 body {
   font-family: Arial, sans-serif;
   color: #e5ddba;
-    background-image: url("../ressources/image/planetarium.jpeg");
+  background-image: url("../ressources/image/combined_planetarium_final.png");
   background-size: cover;
+  background-position: center;
+
 }
 
 #container {
@@ -110,24 +112,6 @@ body {
   color: #fff;
 }
 
-#choixSigne {
-  display: block;
-  width: 100%;
-  margin: 0 auto 18px auto;
-  padding: 14px 0;
-  background: transparent;
-  border: 2px solid #a259e6;
-  border-radius: 30px;
-  color: #a259e6;
-  font-size: 1.15rem;
-  font-weight: 600;
-  text-align: center;
-  box-sizing: border-box;
-  letter-spacing: 0.5px;
-  appearance: none;
-  background-image: none;
-}
-
 h1 {
   font-size: 2.5rem;
   text-align: center;
@@ -197,4 +181,24 @@ h1 {
     font-size: 1.6rem;
     margin-bottom: 16px;
   }
+}
+
+.carte-horoscope {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 10px 0;
+  background-color: #fdfdfd;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.carte-horoscope h3 {
+  margin: 0 0 8px;
+  color: #010101;
+}
+
+.carte-horoscope p {
+  margin: 0;
+  font-style: italic;
+  color: #010101;
 }

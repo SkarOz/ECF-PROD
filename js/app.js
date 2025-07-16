@@ -1,15 +1,8 @@
-const form = document.getElementById("horoscopeForm");
+const btn = document.getElementById("demanderAuCielBtn");
 const resultHoroscope = document.getElementById("horoscopeResult");
 
-form.addEventListener("submit", async function (event) {
+btn.addEventListener("click", async function (event) {
     event.preventDefault();
-
-    const signe = document.getElementById("choixSigne").value;
-
-    if (signe === "") {
-        alert("Sélectionnez un signe !")
-        return;
-    }
 
     resultHoroscope.style.display = "block";
     resultHoroscope.innerHTML = "Consultation des étoiles..."
@@ -30,12 +23,19 @@ form.addEventListener("submit", async function (event) {
 
     const data = await response.json();
 
+      let html = `<h2>${data.message}</h2>`;
+
+        for (const signe in data.horoscope) {
+            html += `
+                <div class="carte-horoscope">
+                    <h3>${signe}</h3>
+                    <p>${data.horoscope[signe]}</p>
+                </div>
+            `;
+        }
+
     console.log(data)
-    resultHoroscope.innerHTML = `
-   <h2>${data.message}</h2>
-    <p>Votre horoscope est :</p>
-    <p>${data.horoscope[signe]}</p>
-   `;
+    resultHoroscope.innerHTML = html;
 
 } catch (error) {
         console.log("error");
