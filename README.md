@@ -2,7 +2,7 @@ Ce projet est réalisé dans le cadre de l'ECF n°1 portant sur les compétences
 de développeur Web et Web mobile 2025-2026. Nommé "Horoscope Oracle du Jour", il vise à créer une application simple type SPA, permettant à un utilisateur de faire un tirage d'horoscope en ligne, via un appel d'API.
 
 
------------------------------------------- FICHIER, TECHNOLOGIE ET ARBORESCENCE -----------------------------------------------
+-------------------------------- FICHIER, TECHNOLOGIE ET ARBORESCENCE --------------------------------------
 
 Les fichiers sont fait pour fonctionner de la manière suivante :
 
@@ -61,19 +61,30 @@ ECF-PROD/
 |
 |----->ressources/
 |       |___ images/
-|           |___ logo.webp
+|       |   |___ zodiac/
+|       |       |___ balance.webp
+|       |       |___ bélier.webp
+|       |       |___ cancer.webp
+|       |       |___ capricorne.webp
+|       |       |___ gémeaux.webp
+|       |       |___ lion.webp
+|       |       |___ poissons.webp
+|       |       |___ sagittaire.webp
+|       |       |___ scorpion.webp
+|       |       |___ taureau.webp
+|       |       |___ verseau.webp
+|       |       |___ vierge.webp
+|       |___ logo.webp
+|       |___ combined_planetarium_final.png
 |
 |___ .htaccess
 |
 |___ index.html
 
-Pour la question des technologies, elles ont déjà été abordés précédement : le HTML5 pour le rendu de la page dans le navigateur,
-le CSS3 pour le design des pages et les animations ainsi que JavaScript pour la gestion des interactions utilisateur - interface WEB. Ici il n'est
-pas question d'utiliser des technologies relatives à la partie BackEnd d'un site, comme PHP8 car celà n'est pas le point d'évaluation
-de cet ECF, se concentrant sur la partie FrontEnd d'un site Web.
+Pour la question des technologies, elles ont déjà été abordés précédement : le HTML5 pour le rendu de la page dans le navigateur, le CSS3 pour le design des pages et les animations ainsi que JavaScript pour la gestion des interactions utilisateur - interface WEB. Ici il n'est pas question d'utiliser des technologies relatives à la partie BackEnd d'un site, comme PHP8 car celà n'est pas le point d'évaluation de cet ECF, se concentrant sur la partie FrontEnd d'un site Web.
 
-------------------------------------------------- ACCES AU SITE ET REPO GITHUB ------------------------------------------------
+--------------------------------------- ACCES AU SITE ET REPO GITHUB ---------------------------------------
 
 Le site est accessible en ligne via le lien suivant : https://ecf1-roger-paulin.sidathsoeun.fr, et le code composant le site est disponible sur mon Github à l'adresse suivante : https://github.com/SkarOz/ECF-PROD.
 
-Pour cloner localement le projet, vous pouvez directement télécharger le ZIP complet contenant le code sur la page Github du projet, ou alors utiliser la commande [git clone https://github.com/SkarOz/ECF-PROD.git] daans un terminal de commande en ayant Git d'installé sur votre machine.
+Pour cloner localement le projet, vous pouvez directement télécharger le ZIP complet contenant le code sur la page Github du projet, ou alors utiliser la commande [git clone https://github.com/SkarOz/ECF-PROD.git] dans un terminal de commande en ayant Git d'installé sur votre machine.

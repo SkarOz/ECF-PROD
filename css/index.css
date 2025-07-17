@@ -5,35 +5,36 @@
 
 html, body {
   height: 100vh;
-  overflow: hidden;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
   font-family: 'Inter', 'Segoe UI', 'Roboto', Arial, sans-serif;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
-  font-family: Arial, sans-serif;
   color: #e5ddba;
   background-image: url("../ressources/image/combined_planetarium_final.png");
   background-size: cover;
   background-position: center;
   z-index: -1;
-  display: relative;
 }
 
 #zodiacImages {
   position: fixed;
-  top: 28%;
-  left: 28%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
   width: 600px;
   height: 600px;
-  margin: auto;
+  max-width: 600px;
+  max-height: 600px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  overflow: visible;
 }
 
 .horoscope-grid {
@@ -44,26 +45,41 @@ body {
   margin: 20px auto;
 }
 
-
-.carte-horoscope {
-  width: auto;
-  height: auto;
-  max-height: 170px;
-  background: rgba(162, 89, 230, 0.15);
-  border-radius: 18px;
-  padding: 15px;
-  box-shadow: 0 4px 16px rgba(162, 89, 230, 0.25);
+.cartes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  justify-content: center;
+  width: 100%;
+  padding: 0 16px;
   box-sizing: border-box;
-  color: #e5ddba;
+}
+
+#resultHoroscope {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  font-size: 0.95rem;
-  overflow: hidden;
+  min-height: 60vh;
+  box-sizing: border-box;
 }
+
+
+.carte-horoscope {
+  padding: 12px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #9908881d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
 .zodiac-card-img {
-  width: 30px;  
+  width: 30px;
   height: 30px;
   margin: auto;
 }
@@ -72,23 +88,6 @@ body {
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(162, 89, 230, 0.4);
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-#resultHoroscope {
-  display: grid;
-  grid-template-columns: repeat(5, 110px);
-  gap: 64px;
-  justify-content: center;
-  margin: auto;
-}
-
-#resultHoroscope .carte-horoscope:nth-child(12) {
-  grid-column: 2;
-}
-#resultHoroscope .carte-horoscope:nth-child(13) {
-  grid-column: 4;
 }
 
 .zodiac-img {
@@ -181,63 +180,112 @@ h1 {
 }
 
 @media (max-width: 900px) {
-  #container {
-    max-width: 95%;
-    padding: 12px;
-  }
   h1 {
     font-size: 2rem;
   }
-  #demanderAuCielBtn, #choixSigne {
-    font-size: 1.2rem;
-    padding: 15px 0;
+  #demanderAuCielBtn {
+    font-size: 1.1rem;
+    padding: 14px 0;
+  }
+
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+  #demanderAuCielBtn {
+    font-size: 1rem;
+    padding: 13px 0;
   }
 }
 
 @media (max-width: 600px) {
   html, body {
-    font-size: 16px;
+    font-size: 15px;
   }
-  #container {
+  .cartes-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .carte-horoscope {
+    max-width: 100%;
     padding: 10px;
   }
-  #horoscopeResult {
-    padding: 16px;
-    font-size: 1.05rem;
-    margin: 16px 0;
-  }
-  #demanderAuCielBtn, #choixSigne {
-    font-size: 1rem;
-    padding: 14px 0;
-    border-width: 2px;
+  h1 {
+    font-size: 1.7rem;
   }
   .footer {
     font-size: 13px;
     padding: 10px 8px;
   }
-  h1 {
-    font-size: 1.8rem;
+  #demanderAuCielBtn {
+    font-size: 0.95rem;
+    padding: 12px 0;
   }
 }
 
 @media (max-width: 400px) {
   html, body {
-    font-size: 15px;
-  }
-  #container {
-    padding: 8px;
-  }
-  #horoscopeResult {
-    padding: 12px;
-    font-size: 1rem;
-  }
-  #demanderAuCielBtn, #choixSigne {
-    font-size: 0.9rem;
-    padding: 12px 0;
-    border-width: 2px;
+    font-size: 14px;
   }
   h1 {
-    font-size: 1.6rem;
-    margin-bottom: 16px;
+    font-size: 1.5rem;
+    margin-bottom: 14px;
   }
+  #demanderAuCielBtn {
+    font-size: 0.85rem;
+    padding: 10px 0;
+  }
+  .footer {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cartes-container {
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 900px) {
+  #zodiacImages {
+    width: 450px;
+    height: 450px;
+  }
+  .zodiac-img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  #zodiacImages {
+    width: 300px;
+    height: 300px;
+  }
+  .zodiac-img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 400px) {
+  #zodiacImages {
+    width: 220px;
+    height: 220px;
+  }
+  .zodiac-img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.carte-horoscope:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(162, 89, 230, 0.4);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

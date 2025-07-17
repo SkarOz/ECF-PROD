@@ -9,40 +9,41 @@ html, body {
     display: flex;
     flex-direction: column;
     font-family: 'Inter', 'Segoe UI', 'Roboto', Arial, sans-serif;
-    overflow-x: hidden;
+    overflow-x:hidden;
+}
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Prend toute la hauteur de la fenêtre */
 }
 
-.apropos {
-    padding: 60px 20px;
+.container {
+    padding: 60px 20px; /* Ajout d'un padding pour éviter que le contenu soit caché sous la barre de navigation */
     max-width: 800px;
     margin: auto;
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
-.apropos h1 {
+
+.container h1 {
     font-size: 24px;
     color: #333;
 }
-.apropos p {
+
+.container p {
     font-size: 16px;
     color: #555;
     margin-bottom: 20px;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 .page-wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Prend toute la hauteur de la fenêtre */
 }
 
 .container {
-    flex: 1;
+    flex: 1; /* Le contenu principal prend tout l’espace restant */
     padding-top: 60px;
 }
 
@@ -81,6 +82,7 @@ html, body {
     height: auto;
   }
   
+  /* 🧠 Le vrai contournement : regrouper les <a> horizontalement */
   .footer {
     flex-wrap: nowrap;
   }
@@ -89,6 +91,7 @@ html, body {
     display: inline;
   }
   
+  /* On force tous les <a> à s'afficher sur une ligne */
   .footer-links-inline {
     display: flex;
     flex-wrap: wrap;
